@@ -6,7 +6,7 @@ HomeComponent
 */
 import React, { Component } from 'react';
 import {
-    AppRegistry,ScrollView,StatusBar,Alert,Dimensions,Platform,StyleSheet,Text, View, FlatList,Image,TouchableOpacity, TouchableHighlight
+    AppRegistry,ScrollView,StatusBar,Alert,ScreenOrientation,Dimensions,Platform,StyleSheet,Text, View, FlatList,Image,TouchableOpacity, TouchableHighlight
 } from 'react-native';
 
 import {
@@ -61,12 +61,21 @@ const FirstRoute = () => (
 
             </View>
 );
+
+function changeScreenOrientation() {
+  //Expo.ScreenOrientation.allow(Expo.ScreenOrientation.Orientation.PORTRAIT );
+  //ScreenOrientation.allow(ScreenOrientation.Orientation.PORTRAIT);
+  //Expo.ScreenOrientation.allow(Expo.ScreenOrientation.Orientation.LANDSCAPE);
+}
 export default class HomeComponent extends React.Component<*, State> {
+
+
 
       componentDidMount(){
 
         var utilObject = Util.getInstance();
         utilObject.setNavData(this.props.navigation);
+       changeScreenOrientation();
       }
 
 

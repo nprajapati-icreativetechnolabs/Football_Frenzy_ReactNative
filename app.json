@@ -1,4 +1,9 @@
+
 {
-  "name": "Football_Frenzy",
-  "displayName": "Football_Frenzy"
+  "expo": {
+    "name": "Football_Frenzy",
+    "slug": "Football_Frenzy",
+    "privacy": "public",
+   "orientation": "portrait",
+  }
 }
